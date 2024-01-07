@@ -20,7 +20,9 @@ import database from './assets/database.json';
       :conteudo="categoria.conteudo"
     />
 
-    <ResetButton />
+    <div class="mt-5">
+      <ResetButton />
+    </div>
 
     <hr class="my-3" />
 
