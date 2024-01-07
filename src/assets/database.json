@@ -1,0 +1,43 @@
+{
+  "categorias": [
+    {
+      "idCategoria": 1,
+      "categoria": "Armas",
+      "conteudo": [
+        { "idItem": "arma1", "item": "Espingarda" },
+        { "idItem": "arma2", "item": "Faca" },
+        { "idItem": "arma3", "item": "Pá" },
+        { "idItem": "arma4", "item": "Soco inglês" },
+        { "idItem": "arma5", "item": "Tesoura" },
+        { "idItem": "arma6", "item": "Veneno" }
+      ]
+    },
+    {
+      "idCategoria": 2,
+      "categoria": "Locais",
+      "conteudo": [
+        { "idItem": "local1", "item": "Banco" },
+        { "idItem": "local2", "item": "Boate" },
+        { "idItem": "local3", "item": "Cemitério" },
+        { "idItem": "local4", "item": "Estação de trem" },
+        { "idItem": "local5", "item": "Floricultura" },
+        { "idItem": "local6", "item": "Hospital" },
+        { "idItem": "local7", "item": "Mansão" },
+        { "idItem": "local8", "item": "Prefeitura" },
+        { "idItem": "local9", "item": "Restaurante" }
+      ]
+    },
+    {
+      "idCategoria": 3,
+      "categoria": "Personagens",
+      "conteudo": [
+        { "idItem": "personagem1", "item": "Coveiro" },
+        { "idItem": "personagem2", "item": "Dançarina" },
+        { "idItem": "personagem3", "item": "Florista" },
+        { "idItem": "personagem4", "item": "Mordomo" },
+        { "idItem": "personagem5", "item": "Médica" },
+        { "idItem": "personagem6", "item": "Prefeito" }
+      ]
+    }
+  ]
+}
