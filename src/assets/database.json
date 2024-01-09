@@ -2,41 +2,41 @@
   "categorias": [
     {
       "idCategoria": 1,
-      "categoria": "Armas",
+      "categoria": "armas",
       "conteudo": [
-        { "idItem": "arma1", "item": "Espingarda" },
-        { "idItem": "arma2", "item": "Faca" },
-        { "idItem": "arma3", "item": "Pá" },
-        { "idItem": "arma4", "item": "Soco inglês" },
-        { "idItem": "arma5", "item": "Tesoura" },
-        { "idItem": "arma6", "item": "Veneno" }
+        { "idItem": "1", "item": "Espingarda" },
+        { "idItem": "2", "item": "Faca" },
+        { "idItem": "3", "item": "Pá" },
+        { "idItem": "4", "item": "Soco inglês" },
+        { "idItem": "5", "item": "Tesoura" },
+        { "idItem": "6", "item": "Veneno" }
       ]
     },
     {
       "idCategoria": 2,
-      "categoria": "Locais",
+      "categoria": "locais",
       "conteudo": [
-        { "idItem": "local1", "item": "Banco" },
-        { "idItem": "local2", "item": "Boate" },
-        { "idItem": "local3", "item": "Cemitério" },
-        { "idItem": "local4", "item": "Estação de trem" },
-        { "idItem": "local5", "item": "Floricultura" },
-        { "idItem": "local6", "item": "Hospital" },
-        { "idItem": "local7", "item": "Mansão" },
-        { "idItem": "local8", "item": "Prefeitura" },
-        { "idItem": "local9", "item": "Restaurante" }
+        { "idItem": "1", "item": "Banco" },
+        { "idItem": "2", "item": "Boate" },
+        { "idItem": "3", "item": "Cemitério" },
+        { "idItem": "4", "item": "Estação de trem" },
+        { "idItem": "5", "item": "Floricultura" },
+        { "idItem": "6", "item": "Hospital" },
+        { "idItem": "7", "item": "Mansão" },
+        { "idItem": "8", "item": "Prefeitura" },
+        { "idItem": "9", "item": "Restaurante" }
       ]
     },
     {
       "idCategoria": 3,
-      "categoria": "Personagens",
+      "categoria": "personagens",
       "conteudo": [
-        { "idItem": "personagem1", "item": "Coveiro" },
-        { "idItem": "personagem2", "item": "Dançarina" },
-        { "idItem": "personagem3", "item": "Florista" },
-        { "idItem": "personagem4", "item": "Mordomo" },
-        { "idItem": "personagem5", "item": "Médica" },
-        { "idItem": "personagem6", "item": "Prefeito" }
+        { "idItem": "1", "item": "Coveiro" },
+        { "idItem": "2", "item": "Dançarina" },
+        { "idItem": "3", "item": "Florista" },
+        { "idItem": "4", "item": "Mordomo" },
+        { "idItem": "5", "item": "Médica" },
+        { "idItem": "6", "item": "Prefeito" }
       ]
     }
   ]
