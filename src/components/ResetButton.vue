@@ -1,6 +1,14 @@
 <script setup>
+import Cookies from 'js-cookie';
+
 function resetGame() {
   alert('O jogo será reiniciado.');
+
+  const allCookies = Cookies.get();
+  Object.keys(allCookies).forEach((cookieName) => {
+    Cookies.remove(cookieName);
+  });
+
   window.location.reload(true);
 }
 </script>
