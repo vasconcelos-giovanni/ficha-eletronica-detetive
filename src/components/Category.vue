@@ -24,7 +24,12 @@ const idsPrefixes = {
 };
 
 const selectedOption = ref('?');
-Cookies.set(idsPrefixes.select, selectedOption.value);
+// Cookies.set(idsPrefixes.select, selectedOption.value);
+if (Cookies.get(idsPrefixes.select) == undefined) {
+  Cookies.set(idsPrefixes.select, selectedOption.value);
+} else {
+  selectedOption.value = Cookies.get(idsPrefixes.select);
+}
 
 watch(selectedOption, () => {
   // Select
@@ -33,20 +38,27 @@ watch(selectedOption, () => {
 
 const checkboxes = reactive({});
 const inputs = reactive({});
-
 onMounted(() => {
   // Checkboxes
   props.conteudo.forEach(({ idItem }) => {
     const checkboxId = idsPrefixes.checkbox + idItem;
     checkboxes[checkboxId] = false; // Set initial value to false
-    Cookies.set(checkboxId, checkboxes[checkboxId]);
+    if (Cookies.get(checkboxId) == undefined) {
+      Cookies.set(checkboxId, checkboxes[checkboxId]);
+    } else {
+      checkboxes[checkboxId] = Cookies.get(checkboxId) == 'false' ? false : true;
+    }
   });
 
   // Inputs
   props.conteudo.forEach(({ idItem }) => {
     const inputId = idsPrefixes.input + idItem;
-    inputs[inputId] = ''; // Set initial value to empty
-    Cookies.set(inputId, inputs[inputId]);
+    inputs[inputId] = ''; // Set initial value to false
+    if (Cookies.get(inputId) == undefined) {
+      Cookies.set(inputId, inputs[inputId]);
+    } else {
+      inputs[inputId] = Cookies.get(inputId);
+    }
   });
 
   watch(
