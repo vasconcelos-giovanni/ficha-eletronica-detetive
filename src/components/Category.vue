@@ -3,9 +3,9 @@ import { onMounted, reactive, ref, watch } from 'vue';
 import Cookies from 'js-cookie';
 
 const props = defineProps({
-  idCategoria: {
+  boardVersion: {
     required: true,
-    type: Number,
+    type: String,
   },
   categoria: {
     required: true,
@@ -15,36 +15,49 @@ const props = defineProps({
     required: true,
     type: Array,
   },
+  idCategoria: {
+    required: true,
+    type: Number,
+  },
+  routeName: {
+    required: true,
+    type: String,
+  },
 });
 
 const idsPrefixes = {
-  select: 'select_' + props.categoria,
-  checkbox: 'checkbox_' + props.categoria,
-  input: 'input_' + props.categoria,
+  select: props.boardVersion + '_select_' + props.categoria,
+  checkbox: props.boardVersion + '_checkbox_' + props.categoria,
+  input: props.boardVersion + '_input_' + props.categoria,
 };
 
 const selectedOption = ref('?');
-// Cookies.set(idsPrefixes.select, selectedOption.value);
 if (Cookies.get(idsPrefixes.select) == undefined) {
-  Cookies.set(idsPrefixes.select, selectedOption.value);
+  Cookies.set(idsPrefixes.select, selectedOption.value, { expires: 1 });
 } else {
   selectedOption.value = Cookies.get(idsPrefixes.select);
 }
 
 watch(selectedOption, () => {
   // Select
-  Cookies.set(idsPrefixes.select, selectedOption.value);
+  Cookies.set(idsPrefixes.select, selectedOption.value, { expires: 1 });
 });
 
 const checkboxes = reactive({});
 const inputs = reactive({});
 onMounted(() => {
+  /* -------------------------------------------------------------------------- */
+  /*                               Cookies: START                               */
+  /* -------------------------------------------------------------------------- */
+  //Board Versions
+  Cookies.set('currentBoardVersion', props.routeName, { expires: 1 });
+
   // Checkboxes
   props.conteudo.forEach(({ idItem }) => {
     const checkboxId = idsPrefixes.checkbox + idItem;
     checkboxes[checkboxId] = false; // Set initial value to false
     if (Cookies.get(checkboxId) == undefined) {
-      Cookies.set(checkboxId, checkboxes[checkboxId]);
+      Cookies.set(checkboxId, checkboxes[checkboxId], { expires: 1 });
     } else {
       checkboxes[checkboxId] = Cookies.get(checkboxId) == 'false' ? false : true;
     }
@@ -55,7 +68,7 @@ onMounted(() => {
     const inputId = idsPrefixes.input + idItem;
     inputs[inputId] = ''; // Set initial value to false
     if (Cookies.get(inputId) == undefined) {
-      Cookies.set(inputId, inputs[inputId]);
+      Cookies.set(inputId, inputs[inputId], { expires: 1 });
     } else {
       inputs[inputId] = Cookies.get(inputId);
     }
@@ -65,7 +78,7 @@ onMounted(() => {
     checkboxes,
     (newCheckboxes) => {
       for (const checkbox in newCheckboxes) {
-        Cookies.set(checkbox, newCheckboxes[checkbox]);
+        Cookies.set(checkbox, newCheckboxes[checkbox], { expires: 1 });
       }
     },
     { deep: true },
@@ -75,11 +88,14 @@ onMounted(() => {
     inputs,
     (newInputs) => {
       for (const input in newInputs) {
-        Cookies.set(input, newInputs[input]);
+        Cookies.set(input, newInputs[input], { expires: 1 });
       }
     },
     { deep: true },
   );
+  /* -------------------------------------------------------------------------- */
+  /*                                Cookies: END                                */
+  /* -------------------------------------------------------------------------- */
 });
 
 function capitalizeFirstLetter(string) {

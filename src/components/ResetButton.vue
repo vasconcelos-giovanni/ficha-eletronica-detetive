@@ -2,11 +2,13 @@
 import Cookies from 'js-cookie';
 
 function resetGame() {
-  alert('O jogo será reiniciado.');
+  alert('Todos os jogos serão reiniciados.');
 
   const allCookies = Cookies.get();
   Object.keys(allCookies).forEach((cookieName) => {
-    Cookies.remove(cookieName);
+    if (cookieName != 'currentBoardVersion') {
+      Cookies.remove(cookieName);
+    }
   });
 
   window.location.reload(true);
