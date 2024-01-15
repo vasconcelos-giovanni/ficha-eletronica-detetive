@@ -1,0 +1,47 @@
+{
+  "version": "classic-6-characters",
+  "versionTitle": "Clássico (6 personagens)",
+  "coverName": "classico_6_personagens.jpg",
+  "routeName": "versions.classic-6",
+  "categorias": [
+    {
+      "idCategoria": 1,
+      "categoria": "armas",
+      "conteudo": [
+        { "idItem": "1", "item": "Espingarda" },
+        { "idItem": "2", "item": "Faca" },
+        { "idItem": "3", "item": "Pá" },
+        { "idItem": "4", "item": "Soco inglês" },
+        { "idItem": "5", "item": "Tesoura" },
+        { "idItem": "6", "item": "Veneno" }
+      ]
+    },
+    {
+      "idCategoria": 2,
+      "categoria": "locais",
+      "conteudo": [
+        { "idItem": "1", "item": "Banco" },
+        { "idItem": "2", "item": "Boate" },
+        { "idItem": "3", "item": "Cemitério" },
+        { "idItem": "4", "item": "Estação de trem" },
+        { "idItem": "5", "item": "Floricultura" },
+        { "idItem": "6", "item": "Hospital" },
+        { "idItem": "7", "item": "Mansão" },
+        { "idItem": "8", "item": "Prefeitura" },
+        { "idItem": "9", "item": "Restaurante" }
+      ]
+    },
+    {
+      "idCategoria": 3,
+      "categoria": "personagens",
+      "conteudo": [
+        { "idItem": "1", "item": "Coveiro" },
+        { "idItem": "2", "item": "Dançarina" },
+        { "idItem": "3", "item": "Florista" },
+        { "idItem": "4", "item": "Mordomo" },
+        { "idItem": "5", "item": "Médica" },
+        { "idItem": "6", "item": "Prefeito" }
+      ]
+    }
+  ]
+}

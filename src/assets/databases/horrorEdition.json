@@ -1,0 +1,54 @@
+{
+  "version": "horror",
+  "versionTitle": "Horror Edition",
+  "coverName": "horror_edition.png",
+  "routeName": "versions.horror-edition",
+  "categorias": [
+    {
+      "idCategoria": 1,
+      "categoria": "armas",
+      "conteudo": [
+        { "idItem": "1", "item": "Faca" },
+        { "idItem": "2", "item": "Garras" },
+        { "idItem": "3", "item": "Gancho" },
+        { "idItem": "4", "item": "Machado" },
+        { "idItem": "5", "item": "Navalha" },
+        { "idItem": "6", "item": "Pregos" },
+        { "idItem": "7", "item": "Serra Elétrica" },
+        { "idItem": "8", "item": "Seringas" },
+        { "idItem": "9", "item": "Taco de hockey" }
+      ]
+    },
+    {
+      "idCategoria": 2,
+      "categoria": "locais",
+      "conteudo": [
+        { "idItem": "1", "item": "Acampamento" },
+        { "idItem": "2", "item": "Ferro Velho" },
+        { "idItem": "3", "item": "Galpão" },
+        { "idItem": "4", "item": "Hospital" },
+        { "idItem": "5", "item": "Hotel" },
+        { "idItem": "6", "item": "Igreja" },
+        { "idItem": "7", "item": "Loja de brinquedo" },
+        { "idItem": "8", "item": "Mansão" },
+        { "idItem": "9", "item": "Parque de diversão" },
+        { "idItem": "10", "item": "Poço" }
+      ]
+    },
+    {
+      "idCategoria": 3,
+      "categoria": "personagens",
+      "conteudo": [
+        { "idItem": "1", "item": "Chucky" },
+        { "idItem": "2", "item": "Fred Krueger" },
+        { "idItem": "3", "item": "Freira" },
+        { "idItem": "4", "item": "Ghost face" },
+        { "idItem": "5", "item": "Jason" },
+        { "idItem": "6", "item": "Jigsaw" },
+        { "idItem": "7", "item": "Michael Myers" },
+        { "idItem": "8", "item": "Pennywise" },
+        { "idItem": "9", "item": "Samara" }
+      ]
+    }
+  ]
+}
