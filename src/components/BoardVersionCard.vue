@@ -16,7 +16,7 @@ const props = defineProps({
   },
 });
 
-const BOARDS_COVERS_PATH_PREFIX = '/src/assets/img/boards/';
+const BOARDS_COVERS_PATH_PREFIX = '../assets/img/boards/';
 </script>
 
 <template>
